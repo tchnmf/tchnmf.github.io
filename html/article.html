@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>Example Title</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 1em;
+    }
+    p  {
+       width: 600px;
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        body {
+            background-color: #fff;
+        }
+        div {
+              width: auto;
+              margin: 0 auto;
+              border-radius: 0;
+              padding: 1em;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+
+
+
+<div>
+    <h1>Example Title</h1>
+    <h3>Tue Oct 24 22:24:10 CEST 2017</h3>
+    <br>
+    Oct 24 22:10:54 app26-001 audit[3685]: CRYPTO_KEY_USER pid=3685 uid=0 auid=0 ses=3 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=destroy kind=server fp=SHA256:5e:7f:49:50:e4:d5:79:55:3f:60:ba:e5:c8:d8:7d:36:64:1f:40:a2:11:5b:10:5d:1b:9b:87:4d:11:54:4f:d2 direction=? spid=3685 suid=0  exe="/usr/sbin/sshd" hostname=? addr=? terminal=? res=success'
+Oct 24 22:10:54 app26-001 audit[3685]: CRED_ACQ pid=3685 uid=0 auid=0 ses=3 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/sbin/sshd" hostname=192.168.124.1 addr=192.168.124.1 terminal=ssh res=success'
+Oct 24 22:10:54 app26-001 audit[3680]: USER_LOGIN pid=3680 uid=0 auid=0 ses=3 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=0 exe="/usr/sbin/sshd" hostname=192.168.124.1 addr=192.168.124.1 terminal=/dev/pts/1 res=success'
+Oct 24 22:10:54 app26-001 audit[3680]: USER_START pid=3680 uid=0 auid=0 ses=3 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=0 exe="/usr/sbin/sshd" hostname=192.168.124.1 addr=192.168.124.1 terminal=/dev/pts/1 res=success'
+Oct 24 22:10:54 app26-001 audit[3680]: CRYPTO_KEY_USER pid=3680 uid=0 auid=0 ses=3 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=destroy kind=server fp=SHA256:5e:7f:49:50:e4:d5:79:55:3f:60:ba:e5:c8:d8:7d:36:64:1f:40:a2:11:5b:10:5d:1b:9b:87:4d:11:54:4f:d2 direction=? spid=3686 suid=0  exe="/usr/sbin/sshd" hostname=? addr=? terminal=? res=success'
+Oct 24 22:13:06 app26-001 systemd[1]: Starting dnf makecache...
+Oct 24 22:13:07 app26-001 dnf[3758]: Metadata cache refreshed recently.
+Oct 24 22:13:07 app26-001 audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Oct 24 22:13:07 app26-001 audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Oct 24 22:13:07 app26-001 systemd[1]: Started dnf makecache
+    <p><a href="https://tchnmf.github.io">Return to Index Page</a></p>
+</div>
+
+<div class="copyright">
+      &copy; Copyleft 2017 
+</div>
+</body>
+</html>
+
