@@ -1,0 +1,15 @@
+1. the index.tt template (and page) needs categories like:
+	-> local articles
+	-> external resources
+	-> media 
+
+
+The categories.tt file to be referenced in index.tt and the content files to be referenced in the categories:
+
+index page 		< index.tt
+	category1 		< category.tt
+		- content1i		< content.tt 
+		- content2
+	category2  		< category.tt
+		- content1		< content.tt
+		- content2
