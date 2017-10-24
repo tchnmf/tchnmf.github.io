@@ -1,0 +1,17 @@
+[% INCLUDE header %]
+
+
+<div>
+    <h1>[% title %]</h1>
+    <h3>[% date %]</h3>
+    <br>
+    <p>[% content %]</p>
+    <p><a href="http://www.iana.org/domains/example">Index Page</a></p>
+</div>
+
+
+
+
+[% INCLUDE footer %]
+
+

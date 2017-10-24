@@ -1,0 +1,7 @@
+<div>
+    <h1>[% article %]</h1>
+    <h3>[% date %]</h3>
+    <br>
+    <p>[% content %]</p>
+</div>
+
