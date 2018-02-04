@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset=utf-8>
+<html>
+<head><link rel=stylesheet type=text/css href=style.css></head>
+<img src=https://tchnmf.github.io/images/md-vim.png style=float:right height=56 width=224 alt=Image />
+<h2>md-VIM Book</h2>
+
+<ul>
+<li>Date: 2018-02-04</li>
+<li>Tags:</li>
+</ul>
+
+
+<hr />
+
+<p>Продукт на скрипта md-write-custom</p>
+
+<p>Много начална фаза братленка. В момента read взима var за заглавие от терминала.</p>
+
+<p>В случай,че файлът вече съществува, &lsquo;if -f&rsquo; ще провери единствено ако уцелиш за повторен път заглавието</p>
+
+<p>И датата, понеже:</p>
+
+<pre>
+[fergus@Maina bin]$ cat md-write-custom 
+#!/bin/bash
+
+echo "Insert title:"
+read title
+
+
+FILE=../md/$title.$(date "+%F").md
+HTML=../html/$title.$(date "+%F").html
+
+</pre>
+
+
+<p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>
+</html>
+
