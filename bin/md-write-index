@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FILE=../md/blog.$(date "+%F").md
-HTML=../html/blog.$(date "+%F").html
+FILE=../md/index.md
+HTML=../index.html
 
 TAGS=()
 
