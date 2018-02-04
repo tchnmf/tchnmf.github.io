@@ -18,7 +18,7 @@ code {
 }
 
 a, a:visited { 
-  color: #006699; 
+  color: #858585; 
   text-decoration: none; 
 }
 a:hover { 
@@ -28,9 +28,7 @@ ul {
   list-style-type: disc; 
   font-family: monospace;
 }
-.footer {
-    font-family: monospace;
-    font-size: 7px;
+small {
     position: fixed;
     left: 0;
     bottom: 0;
