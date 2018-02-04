@@ -1,0 +1,18 @@
+html {
+  font-family: sans-serif;
+}
+
+logo {
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+pre {
+     color: blue;
+}
+
+code {
+    font-family: monospace;
+    color: blue;
+}

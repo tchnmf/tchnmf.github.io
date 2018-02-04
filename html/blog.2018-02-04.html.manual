@@ -1,0 +1,33 @@
+<meta charset=utf-8>
+<html>
+<head><link rel=stylesheet type=text/css href=style.css></head>
+<img src="https://izvetrel.art/static/images/logo.png" style="float:right" alt="Image" />
+<h2>md-VIM Book</h2>
+
+<ul>
+<li>Date: 2018-02-04</li>
+<li>Tags:</li>
+</ul>
+
+
+<hr />
+
+<h3>Markdown tutorials:</h3>
+
+<p><a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
+
+<h4>Code output with html pre tag</h4>
+
+<pre>
+[228252.948445] CPU3: Core temperature/speed normal
+[228252.948445] CPU1: Core temperature/speed normal
+[228252.948446] CPU0: Package temperature/speed normal
+[228252.948446] CPU2: Package temperature/speed normal
+[228252.948447] CPU1: Package temperature/speed normal
+[228252.948448] CPU3: Package temperature/speed normal
+</pre>
+
+
+<h4>Image testing</h4>
+
+<p><img src="https://izvetrel.art/static/images/logo.png" alt="Image" /></p>
