@@ -47,3 +47,5 @@ Engine-Mode: "ENABLED"
 <br>
 
 Update от малко по-късно. Нещата са качени в tchnmf/tchnmf.github.io
+
+да видим сега има ли фуутер?
