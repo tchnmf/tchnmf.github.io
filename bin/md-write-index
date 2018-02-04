@@ -15,7 +15,7 @@ function html {
 }
 
 function footer {
-	echo -e "\n<p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>\n</html>\n" >> $HTML
+	echo -e "\n<br><p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>\n</html>\n" >> $HTML
 }
 
 

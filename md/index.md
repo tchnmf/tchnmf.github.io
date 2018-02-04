@@ -6,8 +6,8 @@
 
 ---
 ###Индекс
-<br><br>
-
+<br>
+####Лог
 [2018-02-04 	 https://tchnmf.github.io/html/quite_an_article_bro.2018-02-04.html](https://tchnmf.github.io/html/quite_an_article_bro.2018-02-04.html) 	 
 [2018-02-04 	 https://tchnmf.github.io/html/blog.2018-02-04.html](https://tchnmf.github.io/html/blog.2018-02-04.html) 	 
 [2018-02-04 	 https://tchnmf.github.io/](https://tchnmf.github.io/) 	 
