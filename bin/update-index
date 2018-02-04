@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# дай му урл
+# Дай му заглавие
+# Нека пристигне в index-а
+# И не забравяй реда!
+
+FILE=../md/index.md
+HTML=../index.html
+
+TAGS=()
+
+function lego {
+  echo -e "## md-VIM Book\n\n* Date: $(date '+%F')\n* Tags: ${TAGS[*]}\n\n\n---\n" > $FILE
+
+} 
+
+function html {
+	echo -e "<!doctype html>\n<meta charset="utf-8">\n<html>\n<head><link rel="stylesheet" type="text/css" href="html/style.css"></head>\n<img src="https://tchnmf.github.io/images/md-vim.png" style="float:right" height="56" width="224" alt="Image" />\n$(cat $HTML)\n" > $HTML
+}
+
+function footer {
+	echo -e "\n<p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>\n</html>\n" >> $HTML
+}
+
+
+
+echo -e "Enter URL:\n"
+read url
+
+echo -e "Enter Name:\n"
+read name
+
+# note: put url as name on noname
+
+cat $FILE|sed  "10a \[$(date "+%F")$(echo -e ' \t ')$url\]\($url\)$(echo -e ' \t ')$name" > $FILE
+
+
+# export html
+markdown $FILE -o $HTML
+
+bash md-write-index
