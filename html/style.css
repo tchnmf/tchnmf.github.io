@@ -28,9 +28,9 @@ ul {
   list-style-type: disc; 
   font-family: monospace;
 }
-footer {
+.footer {
     font-family: monospace;
-    font-size: 9px;
+    font-size: 7px;
     position: fixed;
     left: 0;
     bottom: 0;
