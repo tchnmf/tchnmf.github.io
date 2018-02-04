@@ -11,9 +11,13 @@ function lego {
 } 
 
 function html {
-  echo -e "<!doctype html>\n<meta charset="utf-8">\n<html>\n<head><link rel="stylesheet" type="text/css" href="html/style.css"></head>\n<img src="https://tchnmf.github.io/images/md-vim.png" style="float:right" height="56" width="224" alt="Image" />\n$(cat $HTML)\n\n\n</html>\n" > $HTML
+	echo -e "<!doctype html>\n<meta charset="utf-8">\n<html>\n<head><link rel="stylesheet" type="text/css" href="html/style.css"></head>\n<img src="https://tchnmf.github.io/images/md-vim.png" style="float:right" height="56" width="224" alt="Image" />\n$(cat $HTML)\n" > $HTML
 }
 
+function footer {
+	echo -e "<div class="footer">\n<p><a href="https://tchnmf.github.io/">https://tchnmf.github.io Copyleft</a></p>\n</div>\n\n</html>\n" >> $HTML
+
+}
 
 
 if [ -e $FILE ];then
@@ -22,11 +26,13 @@ if [ -e $FILE ];then
   vim + $FILE
     markdown $FILE -o $HTML
   html
+  footer
 else
   lego
   vim + $FILE
     markdown $FILE -o $HTML
   html
+  footer
 fi
 
 

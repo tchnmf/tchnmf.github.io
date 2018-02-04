@@ -27,4 +27,16 @@ a:hover {
 ul { 
   list-style-type: disc; 
   font-family: monospace;
-} 
+}
+footer {
+    font-family: monospace;
+    font-size: 9px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: gray;
+    text-align: center;
+}
+
