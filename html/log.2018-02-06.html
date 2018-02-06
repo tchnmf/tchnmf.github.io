@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset=utf-8>
+<html>
+<head><link rel=stylesheet type=text/css href=style.css></head>
+<img src=https://tchnmf.github.io/images/md-vim.png style=float:right height=56 width=224 alt=Image />
+<h2>md-VIM Book</h2>
+
+<ul>
+<li>Date: 2018-02-06</li>
+<li>Tags: curl</li>
+</ul>
+
+
+<hr />
+
+<h4>Curl</h4>
+
+<p>curl follow and print the redirect rules:</p>
+
+<p><pre>
+curl -v -L www.katello.org 2>&amp;1 | egrep &ldquo;^> (Host:|GET)&rdquo;
+ GET / HTTP/1.1
+ Host: www.katello.org
+ GET /plugins/katello HTTP/1.0
+ Host: theforeman.org
+ GET /plugins/katello/ HTTP/1.0
+ Host: theforeman.org
+<pre></p>
+
+
+<br><p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>
+</html>
+
