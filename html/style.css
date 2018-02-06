@@ -17,12 +17,13 @@ code {
   color: blue;
 }
 
-a, a:visited { 
-  color: #858585; 
-  text-decoration: none; 
+a {   text-decoration: none; }
+a:hover { text-decoration: underline }
+a:link {
+  color: SlateGray;
 }
-a:hover { 
-  text-decoration: underline; 
+a:visited { 
+  color: Gray; 
 }
 ul { 
   list-style-type: disc; 

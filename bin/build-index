@@ -3,6 +3,7 @@
 FILE=../md/index.md
 HTML=../index.html
 LOG=../md/log-update.md
+INDEX=../md/index-update.md
 TAGS=()
 
 function lego {
@@ -11,7 +12,9 @@ function lego {
 } 
 
 function append_log {
-  cat $LOG >> $FILE
+  cat $INDEX 	>> $FILE
+  echo -e "<br>"  >> $FILE
+  cat $LOG 	>> $FILE
 }
 
 function html {
