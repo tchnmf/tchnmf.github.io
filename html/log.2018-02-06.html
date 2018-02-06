@@ -15,17 +15,28 @@
 
 <h4>Curl</h4>
 
-<p>curl follow and print the redirect rules:</p>
+<p>Follow and print the redirects:</p>
 
-<p><pre>
-curl -v -L www.katello.org 2>&amp;1 | egrep &ldquo;^> (Host:|GET)&rdquo;
+<pre>
+$ curl -v -L www.katello.org 2>&1 | egrep "^> (Host:|GET)"
  GET / HTTP/1.1
  Host: www.katello.org
  GET /plugins/katello HTTP/1.0
  Host: theforeman.org
  GET /plugins/katello/ HTTP/1.0
- Host: theforeman.org
-<pre></p>
+ Host: theforeman.org 
+</pre>
+
+
+<p>Return response code:</p>
+
+<p><em>301: Permanently ( browser caching) / 302: Temporary</em></p>
+
+<pre>
+$ curl www.katello.org -L -I
+ HTTP/1.0 301 Moved Permanently
+ Location: http://www.redhat.com/
+</pre>
 
 
 <br><p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>

@@ -2,7 +2,7 @@ html {
   font-family: serif;
 }
 p { font-size: 13px; }
-
+em { font-size: 12px; }
 hr {
   border: 0;
   height: 128px;
