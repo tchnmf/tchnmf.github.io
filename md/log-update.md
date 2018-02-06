@@ -1,11 +1,3 @@
-## md-VIM Book
-
-* Date: 2018-02-06
-* Tags: 
-
-
----
-
 ####Лог:
 
 [2018-02-06 	 https://tchnmf.github.io/html/log.2018-02-06.html](https://tchnmf.github.io/html/log.2018-02-06.html) 	

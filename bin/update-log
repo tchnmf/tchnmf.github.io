@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# дай му урл
+# Дай му заглавие
+# Нека пристигне в index-а
+# И не забравяй реда!
+
+FILE=../md/log-update.md
+INDEX=../md/index.md
+TAGS=()
+
+
+echo -e "Enter URL:\n"
+read url
+
+echo -e "Enter Name:\n"
+read name
+
+## echo -e "\n\n\n####Лог:\n\n"	> $FILE
+
+cat $FILE|sed  "2a \[$(date "+%F")$(echo -e ' \t ')$url\]\($url\) $name\t" > $FILE
+vim  $FILE
+
+
+
+# Build the index page with new data
+# feed index file with log-update.md content
+# update the index file
+
+bash build-index
