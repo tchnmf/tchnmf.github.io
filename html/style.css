@@ -20,10 +20,10 @@ code {
 a {   text-decoration: none; }
 a:hover { text-decoration: underline }
 a:link {
-  color: SlateGray;
+  color: #333333;
 }
 a:visited { 
-  color: Gray; 
+  color: #4d4d4d; 
 }
 ul { 
   list-style-type: disc; 
