@@ -1,0 +1,28 @@
+#!/bin/bash -x
+
+FILE=../md/log.$(date "+%F").md
+
+# get variable 
+echo "Put tag, eg #tag:"
+read tag
+
+# construct tag url
+link="[$tag](https://tchnmf.github.io/html/search_$tag.html)"
+
+# insert into log
+sed -i "5i \ $link" $FILE
+
+bash md-write
+
+echo "Repeat #tag addition? Y/n?"
+read input
+
+case $input in 
+  [yY])
+	  bash $0
+	  ;;
+  [nN])
+	  exit 0
+	  ;;
+esac
+

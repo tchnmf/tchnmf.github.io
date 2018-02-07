@@ -8,8 +8,7 @@
 <ul>
 <li>Date: 2018-02-06</li>
 <li>Tags:
-<a href="">#curl</a>
-<a href="">#tralala</a>
+<a href="https://tchnmf.github.io/html/search_#curl.html">#curl</a>
 <a href="">#blabalba</a></li>
 </ul>
 
@@ -39,6 +38,22 @@ $ curl -v -L www.katello.org 2>&1 | egrep "^> (Host:|GET)"
 $ curl www.katello.org -L -I
  HTTP/1.0 301 Moved Permanently
  Location: http://www.redhat.com/
+</pre>
+
+
+<p><br></p>
+
+<p>Тестове за работа с #тагове
+Таговете имат свои сумиращи страници: /html/search_tag
+В които ще има <em>number of occurences</em> и списък с тагнатите файлове</p>
+
+<pre>
+tag #curl ->
+html/search_#curl.html
+https://tchnmf.github.io/html/search_#curl.html
+grep -r "#[a-z]" md/|grep search| awk '{ print $1 }'
+md/log.2018-02-06.md
+number of occurences
 </pre>
 
 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# търси, намира тагове, генерира search_#tag.html страници
+# Показва повторенията на тага и страниците,на които се намира
+
+# grep -r "#[a-z]" md/|grep search
+
+grep -r "[#[a-z]]" ../md/|grep search|grep -v grep

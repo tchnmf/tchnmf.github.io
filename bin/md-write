@@ -11,11 +11,12 @@
 # c. От създадения md файл, герерираме html документ с 'markdown'
 
 FILE=../md/log.$(date "+%F").md
+TAGS=../md/tags.$(date "+%F").md
 HTML=../html/log.$(date "+%F").html
-TAGS=()
+
 
 function lego {
-  echo -e "## md-VIM Book\n\n* Date: $(date '+%F')\n* Tags: ${TAGS[*]}\n\n\n---\n" > $FILE
+  echo -e "## md-VIM Book\n\n* Date: $(date '+%F')\n* Tags: \n\n\n---\n" > $FILE
 } 
 function html {
   echo -e "<!doctype html>\n<meta charset="utf-8">\n<html>\n<head><link rel="stylesheet" type="text/css" href="style.css"></head>\n<img src="https://tchnmf.github.io/images/md-vim.png" style="float:right" alt="Image" />\n$(cat $HTML)\n" > $HTML
