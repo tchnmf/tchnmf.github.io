@@ -1,0 +1,100 @@
+<!doctype html>
+<meta charset=utf-8>
+<html>
+<head><link rel=stylesheet type=text/css href=style.css></head>
+<img src=https://tchnmf.github.io/images/md-vim.png style=float:right alt=Image />
+<h2>md-VIM Book</h2>
+
+<ul>
+<li>Date: 2018-02-10</li>
+<li>Tags:
+<a href="https://tchnmf.github.io/html/search_#sec.html">#sec</a>
+<a href="https://tchnmf.github.io/html/search_#apache.html">#apache</a></li>
+</ul>
+
+
+<hr />
+
+<h4>CONNECT Method Allowed in HTTP Server Or HTTP Proxy Server Vulnerability</h4>
+
+<p>The HTTP server accepts the &ldquo;CONNECT&rdquo; method to public domain.</p>
+
+<h5>Symptom:</h5>
+
+<pre>
+139.213.87.53 - - [09/Feb/2018:04:39:08 +0100] "CONNECT store.steampowered.com:443 HTTP/1.1" 200 - 4416 "-" "-"
+106.14.203.89 - - [09/Feb/2018:04:39:08 +0100] "CONNECT www.expedia.com:443 HTTP/1.0" 200 - 3004 "-" "-"
+31.135.137.87 - - [09/Feb/2018:04:39:08 +0100] "CONNECT www.instagram.com:443 HTTP/1.0" 200 - 167942 "-" "-"
+119.23.132.94 - - [09/Feb/2018:04:39:08 +0100] "CONNECT mobile.12306.cn:443 HTTP/1.1" 200 - 636367 "-" "-"
+139.211.40.254 - - [09/Feb/2018:04:39:08 +0100] "CONNECT store.steampowered.com:443 HTTP/1.1" 200 - 3551 "-" "-"
+120.78.226.79 - - [09/Feb/2018:04:39:08 +0100] "CONNECT mobile.12306.cn:443 HTTP/1.1" 200 - 611799 "-" "-"
+47.93.57.237 - - [09/Feb/2018:04:39:08 +0100] "CONNECT kyfw.12306.cn:443 HTTP/1.1" 200 - 577910 "-" "-"
+120.78.226.79 - - [09/Feb/2018:04:39:08 +0100] "CONNECT mobile.12306.cn:443 HTTP/1.1" 200 - 618509 "-" "-"
+</pre>
+
+
+<h5>Test with telnet:</h5>
+
+<pre>
+$ telnet our-httpd.com 80
+Escape character is '^]'.
+CONNECT mobile.12306.cn:443 HTTP/1.1
+Host: mobile.12306.cn
+
+HTTP/1.0 200 Connection Established
+Proxy-agent: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16
+
+Connection closed by foreign host.
+</pre>
+
+
+<p>creates:</p>
+
+<pre>
+46.227.13.67 - - [10/Feb/2018:11:33:28 +0100] "CONNECT mobile.12306.cn:443 HTTP/1.1" 200 - 24411574 "-" "-"
+</pre>
+
+
+<h5>Solution:</h5>
+
+<p>Comment out or remove</p>
+
+<pre>
+proxy_connect_module modules/mod_proxy_connect.so
+
+
+$ httpd -M | grep proxy
+$ grep -r proxy_connect_module /etc/httpd
+</pre>
+
+
+<p>Then, the telnet output would be:</p>
+
+<pre>
+500 Internal Server Error
+Internal Server Error
+The server encountered an internal error or
+misconfiguration and was unable to complete
+your request.
+Please contact the server administrator at 
+ root@localhost to inform them of the time this error occurred,
+ and the actions you performed just before this error.
+More information about this error may be available
+in the server error log.
+</body></html>
+</pre>
+
+
+<p>Good security article from Debian</p>
+
+<p><a href="https://wiki.debian.org/Apache/Hardening">https://wiki.debian.org/Apache/Hardening</a></p>
+
+
+
+<br>
+<p><a href=https://tchnmf.github.io/>home</a></p>
+
+
+<br>
+<p><small><a href=https://tchnmf.github.io/>tchnmf.github.io copyleft</a><small></p>
+</html>
